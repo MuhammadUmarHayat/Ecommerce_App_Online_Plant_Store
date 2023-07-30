@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.Background{
+    background-color: #386ddb;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.plants-store{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    position: relative;
+    top: 0;
+}
+.Lists{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.Home{
+    color: white;
+    text-decoration: none;
+}
+.active{
+    color: #50fb46;
+}
+.Bg-color{
+    background-color: black;
+    padding-top: 10px;
+}
+.Bg-color-2{
+    background-color: #4370e7;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 60px 60px;
+    gap: 40px;
+}
+.main-image{
+    width: 110%;
+    height: 105%;
+}
+.welcome{
+    color: #50fb46;
+    font-size: 50px;
+}
+.online {
+    font-size: 30px;
+    padding-top: 10px;
+    color: white;
+}
+.Household{
+    color: white;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.info{
+    text-decoration: none;
+    color: black;
+}
+.button-1{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+.button{
+    padding: 10px 15px;
+    font-size: 14px;
+    border-style: none;
+}
+.flex-property{
+    display: flex;
+    justify-content: center;
+    max-width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 20px;
+}
+.border{
+    border: solid whitesmoke;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    top: -70px;
+}
+.plant-text{
+    font-size: 18px;
+}
+.plants-images{
+    width: 48px;
+    height: 48px;
+}
+

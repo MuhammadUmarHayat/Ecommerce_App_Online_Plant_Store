@@ -1,0 +1,33 @@
+db=> rumshadb
+category=>
+Summer Plants
+Winter Plants
+Indoor Plants
+Outdoor Plants
+flowers
+tools
+fertilizers
+pots
+seeds
+// remaining quantity in the stock
+SELECT p.id, p.title, p.quantity - COALESCE(s.total_sale, 0) AS remaining_quantity FROM plant_table p LEFT JOIN ( SELECT product, SUM(qty) AS total_sale FROM sale_table GROUP BY product ) s ON p.id = s.product
+
+//All product review 
+SELECT product, SUM(likes) AS total_likes, SUM(rank) AS total_rank, AVG(stars) AS average_stars FROM feedback_table GROUP BY product
+//specific product
+SELECT 
+    product,
+    SUM(likes) AS total_likes,
+    SUM(rank) AS total_rank,
+    AVG(stars) AS average_stars
+FROM
+    feedback_table
+WHERE
+    product = 'ProductA'
+GROUP BY
+    product;
+//join plant_table and feedback_table
+SELECT p.`id`, p.`title`, p.`category`, p.`description`, p.`photo`, p.`quantity`, p.`purchase`, p.`sale`, p.`purchasing_date`, p.`status`, IFNULL(f.total_likes, 0) AS total_likes, IFNULL(f.total_rank, 0) AS total_rank, IFNULL(f.average_stars, 0) AS average_stars FROM `plant_table` p LEFT JOIN ( SELECT product, SUM(likes) AS total_likes, SUM(rank) AS total_rank, AVG(stars) AS average_stars FROM `feedback_table` GROUP BY product ) f ON p.`id` = f.`product` ORDER BY p.`id`
+
+
+total_likes,total_rank,average_stars 
